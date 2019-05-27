@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Cake Lab</title>
+
+        <!-- Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700|Lato:400,700&display=swap" rel="stylesheet">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="icon" href="/images/favicon.ico">
+        
+        <!-- scripts -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script>
+            var app = app || {
+                header: null,
+                parallaxSections: null,
+
+                go: function() {
+                    app.setHeaderBackground();
+                    app.positionSprites();
+
+                    document.addEventListener('scroll', ev => {
+                        app.setHeaderBackground();
+                        app.positionSprites();
+                    });
+                },
+
+                setHeaderBackground: function() {
+                    if(!app.header) {
+                        app.header = document.querySelector('#header');
+                    }
+
+                    if(window.scrollY > 0) {
+                        if(app.header.classList.contains('white-bg')) {
+                            return;
+                        }
+                        app.header.classList.add('white-bg');
+                    } else {
+                        app.header.classList.remove('white-bg');
+                    }
+                },
+
+                positionSprites: function() {
+                    if(!app.parallaxSections) {
+                        app.parallaxSections = document.querySelectorAll('.parallax-bg');
+                    }
+
+                    app.parallaxSections.forEach(bgSection => {
+                        if(!bgSection.classList.contains('no-parallax')) {
+                            bgSection.style.backgroundPositionY = -(bgSection.getBoundingClientRect().top / 2) + 'px';
+                        }
+
+                        // Add watchers for sprites
+                        bgSection.querySelectorAll('.sprite').forEach(sprite => {
+                            if (sprite.dataset.direction === 'down') {
+                                sprite.style.backgroundPositionY = -((bgSection.getBoundingClientRect().top / sprite.dataset.speed) - sprite.dataset.offsety) + 'px';
+                            } else if(sprite.dataset.direction === 'up') {
+                                sprite.style.backgroundPositionY = (parseInt(sprite.dataset.offsety) + (parseInt(bgSection.getBoundingClientRect().top) * (sprite.dataset.speed / 2))) + (sprite.dataset.offsety.indexOf('px') > -1 || sprite.dataset.offsety.indexOf('%') > -1 ? '' : 'px');
+                            }
+
+                            if(sprite.dataset.scale) {
+                                sprite.style.backgroundSize = parseInt(sprite.dataset.scale) - parseInt(bgSection.getBoundingClientRect().top) + (sprite.dataset.offsety.indexOf('px') > -1 || sprite.dataset.offsety.indexOf('%') > -1 ? '' : 'px');
+                            }
+
+                            if(sprite.dataset.offsetx) {
+                                sprite.style.backgroundPositionX = sprite.dataset.offsetx;
+                            }
+
+                            if(sprite.dataset.rotate) {
+                                sprite.style.transform = 'rotate(' + bgSection.getBoundingClientRect().top + 'deg)';
+                            }
+                        });
+                    });
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <header id="header" class="pt-3 pb-3 fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="header-icon"></div>
+                    </div>
+                    <div class="col d-flex align-items-center justify-content-end">
+                        <div class="d-block d-sm-none">
+                            ☰
+                        </div>
+                        <nav class="d-none d-sm-block">
+                            <ul class="list-inline d-block m-0">
+                                <li class="list-inline-item"><a href="#about" class="p-2">About</a></li>
+                                <li class="list-inline-item"><a href="#gallery" class="p-2">Gallery</a></li>
+                                <li class="list-inline-item"><a href="#contact" class="p-2">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="intro" class="parallax-bg d-flex align-items-center">
+            <div class="gradient"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex flex-column justify-content-center align-items-end text-right">
+                        <h1>The science of confectionary</h1>
+                        <p class="clipped">We are a specialist cakes and confectionaries company, with a focus on the science of premium raw ingredients.</p>
+                        <p>
+                            <!-- <strong>Innovative. Delicious.</strong> -->
+                            <a href="#contact"><strong>Get in touch</strong></a>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <div id="cake-1" class="sprite" data-direction="down" data-speed="2" data-offsety="100"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="parallax-bg">
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="owner-picture" class="col-12 col-sm-6">
+                        &nbsp;
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="clipped mt-5">
+                            <h2>About</h2>
+                            <p>Science is core to our philosophy, as all our products are created by scientists who are passionate about good food. Through mixing art and science, we are able to produce beautiful, delicious cakes and confectioneries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        Contact details
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        Footer shiz
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            (function(){
+                app.go();
+            })();
+        </script>
+    </body>
+</html>
