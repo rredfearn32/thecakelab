@@ -1,0 +1,83 @@
+:root {
+  font-size: 15px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: "Cinzel", serif;
+}
+
+a {
+  color: #cf4747;
+}
+
+#header {
+  transition: background 0.2s;
+}
+#header.white-bg {
+  background-color: #fff;
+  border-bottom: 1px solid #ededed;
+}
+#header .header-icon {
+  background-image: url("/assets/images/thecakelab500.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40px;
+  width: 185px;
+}
+
+.container {
+  z-index: 1;
+}
+
+#intro {
+  padding-top: 72px;
+  position: relative;
+  overflow: hidden;
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/geometry2.png");
+}
+#intro .gradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(180deg, #fbefef 10%, transparent 70%);
+  z-index: 0;
+  top: 0;
+}
+#intro .clipped {
+  max-width: 360px;
+}
+#intro #cake-1 {
+  background-image: url("/assets/images/cake_2_cutout.png");
+  height: 600px;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left 100px;
+}
+
+#about #owner-picture {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/assets/images/owner.jpg");
+  height: calc(100vh - 71px);
+}
+#about .clipped {
+  max-width: 500px;
+}
+
+@media (max-width: 575.98px) {
+  section#intro {
+    height: calc(100vh - 72px);
+    margin-top: 72px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
