@@ -67,10 +67,35 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("/assets/images/owner.jpg");
-  height: calc(100vh - 71px);
+  height: 500px;
+}
+#about #about-info {
+  color: #fff;
+  background-color: #cf4747;
+  background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
 }
 #about .clipped {
   max-width: 500px;
+}
+
+#gallery {
+  background-image: url("/assets/images/grid.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+#contact {
+  background-image: linear-gradient(0deg, #dedede 0%, white 100%);
+}
+
+#footer {
+  background-color: #333;
+  color: #fefefe;
+}
+#footer a {
+  color: #fefefe;
+  font-weight: bold;
 }
 
 @media (max-width: 575.98px) {

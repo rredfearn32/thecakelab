@@ -1,3 +1,5 @@
+$red: #cf4747;
+
 :root {
     font-size: 15px;
 }
@@ -12,7 +14,7 @@ h1, h2, h3 {
 }
 
 a {
-    color: rgb(207, 71, 71);
+    color: $red;
 }
 
 #header {
@@ -73,11 +75,38 @@ a {
         background-repeat: no-repeat;
         background-position: center;
         background-image: url('/assets/images/owner.jpg');
-        height: calc(100vh - 71px);
+        height: 500px;
+    }
+
+    #about-info {
+        color: #fff;
+        background-color: $red;
+        background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
     }
 
     .clipped {
         max-width: 500px;
+    }
+}
+
+#gallery {
+    background-image: url('/assets/images/grid.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+#contact {
+    background-image: linear-gradient(0deg, #dedede 0%, white 100%);
+}
+
+#footer {
+    background-color: #333;
+    color: #fefefe;
+    
+    a {
+        color: #fefefe;
+        font-weight: bold;
     }
 }
 
