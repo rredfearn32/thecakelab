@@ -8,7 +8,11 @@ var app = app || {
         app.positionSprites();
         app.galleryExpander();
 
-        document.addEventListener('scroll', ev => {
+        window.addEventListener('resize', function(ev){
+            app.positionSprites();
+        });
+
+        document.addEventListener('scroll', function(ev) {
             app.setHeaderBackground();
             app.positionSprites();
         });
@@ -42,13 +46,20 @@ var app = app || {
             app.parallaxSections = document.querySelectorAll('.parallax-bg');
         }
 
-        app.parallaxSections.forEach(bgSection => {
+        if(document.body.clientWidth <= 768) {
+            document.querySelectorAll('.sprite').forEach(function(sprite) {
+                sprite.setAttribute('style', '');
+            });
+            return false;
+        }
+
+        app.parallaxSections.forEach(function(bgSection) {
             if(!bgSection.classList.contains('no-parallax')) {
                 bgSection.style.backgroundPositionY = -(bgSection.getBoundingClientRect().top / 2) + 'px';
             }
 
             // Add watchers for sprites
-            bgSection.querySelectorAll('.sprite').forEach(sprite => {
+            bgSection.querySelectorAll('.sprite').forEach(function(sprite) {
                 if (sprite.dataset.direction === 'down') {
                     sprite.style.backgroundPositionY = -((bgSection.getBoundingClientRect().top / sprite.dataset.speed) - sprite.dataset.offsety) + 'px';
                 } else if(sprite.dataset.direction === 'up') {

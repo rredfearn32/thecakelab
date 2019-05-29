@@ -74,8 +74,16 @@ a {
   background-color: #cf4747;
   background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
 }
+#about #about-info #mobile-owner {
+  margin: auto;
+  border: 2px solid #fff;
+  box-shadow: 1px 1px 5px #333;
+  max-width: 400px;
+  width: 100%;
+}
 #about .clipped {
   max-width: 500px;
+  margin: auto;
 }
 
 #gallery {
@@ -129,6 +137,10 @@ a {
 }
 
 @media (max-width: 767.98px) {
+  #intro #cake-1 {
+    background-position: left 160px;
+  }
+
   #gallery .g-column {
     flex: 50%;
   }
