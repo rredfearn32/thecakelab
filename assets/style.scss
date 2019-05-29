@@ -90,14 +90,50 @@ a {
 }
 
 #gallery {
-    background-image: url('/assets/images/grid.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
+    height: 420px;
+    position: relative;
+    transition: height 0.2s;
+    overflow: hidden;
+
+    &.expanded {
+        height: 100%;
+    }
+
+    a {
+        position: absolute;
+        background: $red;
+        color: #ffffff;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+    }
+    
+    .g-row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    
+    /* Create four equal columns that sits next to each other */
+    .g-column {
+        flex: 25%;
+        padding: 0 4px;
+    }
+    
+    .g-column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
 }
 
 #contact {
     background-image: linear-gradient(0deg, #dedede 0%, white 100%);
+
+    .clipped {
+        max-width: 450px;
+        margin: auto;
+    }
 }
 
 #footer {
@@ -110,6 +146,15 @@ a {
     }
 }
 
+// When on tablets or larger mobile...
+@media (max-width: 767.98px) {
+    #gallery {
+        .g-column {
+            flex: 50%;
+        }
+    }
+}
+
 // When on mobile...
 @media (max-width: 575.98px) {
     header {
@@ -118,8 +163,14 @@ a {
         }
     }
 
-    section#intro {
+    #intro {
         height: calc(100vh - 72px);
         margin-top: 72px;
+    }
+
+    #gallery {
+        .g-column {
+            flex: 100%;
+        }
     }
 }

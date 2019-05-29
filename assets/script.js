@@ -1,14 +1,24 @@
 var app = app || {
     header: null,
     parallaxSections: null,
+    gallery: null,
 
     go: function() {
         app.setHeaderBackground();
         app.positionSprites();
+        app.galleryExpander();
 
         document.addEventListener('scroll', ev => {
             app.setHeaderBackground();
             app.positionSprites();
+        });
+    },
+
+    galleryExpander: function() {
+        document.querySelector('#gallery-expander').addEventListener('click', function(event) {
+            event.preventDefault();
+            event.target.remove();
+            document.querySelector('#gallery').classList.add('expanded');
         });
     },
 
