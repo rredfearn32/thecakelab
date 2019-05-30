@@ -43,10 +43,6 @@ a:hover {
   width: 185px;
 }
 
-.container {
-  z-index: 1;
-}
-
 #intro {
   padding-top: 72px;
   position: relative;
@@ -61,11 +57,14 @@ a:hover {
   z-index: 0;
   top: 0;
 }
+#intro h1 {
+  max-width: 100%;
+}
 #intro .clipped {
   max-width: 360px;
 }
-#intro #cake-1 {
-  background-image: url("/assets/images/cake_2_cutout.png");
+#intro #cake-cutout {
+  background-image: url("/assets/images/cake_cutout.png");
   height: 600px;
   width: 100%;
   background-position: center;
@@ -122,6 +121,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
+  margin-bottom: 8px;
 }
 #gallery .g-column {
   flex: 25%;
@@ -151,7 +151,7 @@ a:hover {
 }
 
 @media (max-width: 767.98px) {
-  #intro #cake-1 {
+  #intro #cake-cutout {
     background-position: center 20px;
   }
   #intro .clipped {
@@ -167,7 +167,7 @@ a:hover {
     display: none;
     position: absolute;
     top: 70px;
-    right: 5px;
+    right: 10px;
     text-align: right;
   }
   #header nav::before {
@@ -179,7 +179,7 @@ a:hover {
     border-right: 10px solid transparent;
     border-bottom: 10px solid #fff;
     top: -10px;
-    right: 10px;
+    right: 5px;
   }
   #header nav ul {
     border-radius: 3px;

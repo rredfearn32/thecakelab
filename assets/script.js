@@ -22,14 +22,12 @@ var app = app || {
                 ev.preventDefault();
                 let targetSection = document.querySelector(ev.target.getAttribute('href'));
                 let scrollPos = targetSection.offsetTop - document.querySelector('#header').offsetHeight;
-                console.log(scrollPos);
 
                 window.scrollTo(0, scrollPos);
             });
         });
 
         document.querySelector('#mobile-menu-button').addEventListener('click', function(ev) {
-            console.log('menu button clicked')
             ev.preventDefault();
             ev.stopPropagation();
             document.querySelector('header nav').classList.add('open');
@@ -39,12 +37,6 @@ var app = app || {
     },
 
     handleBodyClickToCloseMenu: function(ev) {
-        console.log('handleBodyClickToCloseMenu')
-
-        if(ev.target.closest('nav')) {
-            return true;
-        }
-
         document.querySelector('header nav').classList.remove('open');
         document.removeEventListener('click', app.handleBodyClickToCloseMenu);
     },
@@ -62,7 +54,7 @@ var app = app || {
             app.header = document.querySelector('#header');
         }
 
-        if(window.scrollY > 0) {
+        if(window.pageYOffset > 0) {
             if(app.header.classList.contains('white-bg')) {
                 return;
             }
@@ -95,18 +87,6 @@ var app = app || {
                     sprite.style.backgroundPositionY = -((bgSection.getBoundingClientRect().top / sprite.dataset.speed) - sprite.dataset.offsety) + 'px';
                 } else if(sprite.dataset.direction === 'up') {
                     sprite.style.backgroundPositionY = (parseInt(sprite.dataset.offsety) + (parseInt(bgSection.getBoundingClientRect().top) * (sprite.dataset.speed / 2))) + (sprite.dataset.offsety.indexOf('px') > -1 || sprite.dataset.offsety.indexOf('%') > -1 ? '' : 'px');
-                }
-
-                if(sprite.dataset.scale) {
-                    sprite.style.backgroundSize = parseInt(sprite.dataset.scale) - parseInt(bgSection.getBoundingClientRect().top) + (sprite.dataset.offsety.indexOf('px') > -1 || sprite.dataset.offsety.indexOf('%') > -1 ? '' : 'px');
-                }
-
-                if(sprite.dataset.offsetx) {
-                    sprite.style.backgroundPositionX = sprite.dataset.offsetx;
-                }
-
-                if(sprite.dataset.rotate) {
-                    sprite.style.transform = 'rotate(' + bgSection.getBoundingClientRect().top + 'deg)';
                 }
             });
         });

@@ -52,10 +52,6 @@ a {
     }
 }
 
-.container {
-    z-index: 1;
-}
-
 #intro {
     padding-top: 72px;
     position: relative;
@@ -71,12 +67,16 @@ a {
         top: 0;
     }
 
+    h1 {
+        max-width: 100%;
+    }
+
     .clipped {
         max-width: 360px;
     }
 
-    #cake-1 {
-        background-image: url('/assets/images/cake_2_cutout.png');
+    #cake-cutout {
+        background-image: url('/assets/images/cake_cutout.png');
         height: 600px;
         width: 100%;
         background-position: center;
@@ -141,6 +141,7 @@ a {
         display: flex;
         flex-wrap: wrap;
         padding: 0 4px;
+        margin-bottom: 8px;
     }
     
     /* Create four equal columns that sits next to each other */
@@ -178,7 +179,7 @@ a {
 // When on tablets or larger mobile...
 @media (max-width: 767.98px) {
     #intro {
-        #cake-1 {
+        #cake-cutout {
             background-position: center 20px;
         }
 
@@ -201,7 +202,7 @@ a {
             display: none;
             position: absolute;
             top: 70px;
-            right: 5px;
+            right: 10px;
             text-align: right;
 
             &::before {
@@ -213,8 +214,7 @@ a {
                 border-right: 10px solid transparent;
                 border-bottom: 10px solid #fff;
                 top: -10px;
-                right: 10px;
-
+                right: 5px;
             }
 
             ul {
