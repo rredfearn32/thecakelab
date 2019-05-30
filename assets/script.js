@@ -17,6 +17,17 @@ var app = app || {
             app.positionSprites();
         });
 
+        document.querySelectorAll('.snaplink').forEach(function(link) {
+            link.addEventListener('click', function(ev) {
+                ev.preventDefault();
+                let targetSection = document.querySelector(ev.target.getAttribute('href'));
+                let scrollPos = targetSection.offsetTop - document.querySelector('#header').offsetHeight;
+                console.log(scrollPos);
+
+                window.scrollTo(0, scrollPos);
+            });
+        });
+
         document.querySelector('#mobile-menu-button').addEventListener('click', function(ev) {
             console.log('menu button clicked')
             ev.preventDefault();

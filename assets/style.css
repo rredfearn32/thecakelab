@@ -15,13 +15,24 @@ a {
   color: #cf4747;
   white-space: nowrap;
 }
+a:hover {
+  text-decoration: none;
+}
 
 #header {
-  transition: background 0.2s;
+  transition: background-color 0.2s;
 }
 #header.white-bg {
   background-color: #fff;
   border-bottom: 1px solid #ededed;
+}
+#header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#header nav ul li {
+  display: inline-block;
 }
 #header .header-icon {
   background-image: url("/assets/images/thecakelab500.png");
@@ -104,6 +115,9 @@ a {
   width: 100%;
   left: 0;
 }
+#gallery a:hover {
+  background-color: #b42f2f;
+}
 #gallery .g-row {
   display: flex;
   flex-wrap: wrap;
@@ -149,11 +163,44 @@ a {
   }
 }
 @media (max-width: 575.98px) {
-  header nav {
+  #header nav {
     display: none;
     position: absolute;
+    top: 70px;
+    right: 5px;
+    text-align: right;
   }
-  header nav.open {
+  #header nav::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    top: -10px;
+    right: 10px;
+  }
+  #header nav ul {
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fff;
+  }
+  #header nav ul li {
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  #header nav ul li:last-child {
+    border-bottom: none;
+  }
+  #header nav ul li a {
+    display: block;
+  }
+  #header nav ul li a:hover {
+    background-color: #cf4747;
+    color: #fff;
+  }
+  #header nav.open {
     display: block;
   }
 
