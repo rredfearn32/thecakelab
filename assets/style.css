@@ -35,7 +35,7 @@ a:hover {
   display: inline-block;
 }
 #header .header-icon {
-  background-image: url("/assets/images/thecakelab500.png");
+  background-image: url("./images/thecakelab500.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -47,7 +47,7 @@ a:hover {
   padding-top: 72px;
   position: relative;
   overflow: hidden;
-  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/geometry2.png");
+  background-image: url("./images/geometry2.png");
 }
 #intro .gradient {
   position: absolute;
@@ -64,7 +64,7 @@ a:hover {
   max-width: 360px;
 }
 #intro #cake-cutout {
-  background-image: url("/assets/images/cake_cutout.png");
+  background-image: url("./images/cake_cutout.png");
   height: 600px;
   width: 100%;
   background-position: center;
@@ -77,13 +77,13 @@ a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/assets/images/owner.jpg");
+  background-image: url("./images/owner.jpg");
   height: 500px;
 }
 #about #about-info {
   color: #fff;
   background-color: #cf4747;
-  background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
+  background-image: url("./images/az-subtle.png");
 }
 #about #about-info #mobile-owner {
   margin: auto;

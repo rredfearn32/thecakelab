@@ -43,7 +43,7 @@ a {
     }
 
     .header-icon {
-        background-image: url("/assets/images/thecakelab500.png");
+        background-image: url("./images/thecakelab500.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -56,7 +56,7 @@ a {
     padding-top: 72px;
     position: relative;
     overflow: hidden;
-    background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/geometry2.png');
+    background-image: url('./images/geometry2.png');
 
     .gradient {
         position: absolute;
@@ -76,7 +76,7 @@ a {
     }
 
     #cake-cutout {
-        background-image: url('/assets/images/cake_cutout.png');
+        background-image: url('./images/cake_cutout.png');
         height: 600px;
         width: 100%;
         background-position: center;
@@ -91,14 +91,14 @@ a {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url('/assets/images/owner.jpg');
+        background-image: url('./images/owner.jpg');
         height: 500px;
     }
 
     #about-info {
         color: #fff;
         background-color: $red;
-        background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
+        background-image: url("./images/az-subtle.png");
 
         #mobile-owner {
             margin: auto;
