@@ -16,12 +16,32 @@ var app = app || {
             app.setHeaderBackground();
             app.positionSprites();
         });
+
+        document.querySelector('#mobile-menu-button').addEventListener('click', function(ev) {
+            console.log('menu button clicked')
+            ev.preventDefault();
+            ev.stopPropagation();
+            document.querySelector('header nav').classList.add('open');
+
+            document.addEventListener('click', app.handleBodyClickToCloseMenu);
+        });
+    },
+
+    handleBodyClickToCloseMenu: function(ev) {
+        console.log('handleBodyClickToCloseMenu')
+
+        if(ev.target.closest('nav')) {
+            return true;
+        }
+
+        document.querySelector('header nav').classList.remove('open');
+        document.removeEventListener('click', app.handleBodyClickToCloseMenu);
     },
 
     galleryExpander: function() {
-        document.querySelector('#gallery-expander').addEventListener('click', function(event) {
-            event.preventDefault();
-            event.target.remove();
+        document.querySelector('#gallery-expander').addEventListener('click', function(ev) {
+            ev.preventDefault();
+            ev.target.remove();
             document.querySelector('#gallery').classList.add('expanded');
         });
     },

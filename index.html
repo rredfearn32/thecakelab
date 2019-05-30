@@ -11,6 +11,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/font-awesome-4.7.0//css/font-awesome.min.css">
         <link rel="stylesheet" href="/assets/style.css">
         <link rel="icon" href="/assets/images/favicon.ico">
         
@@ -27,32 +28,31 @@
                     </div>
                     <div class="col d-flex align-items-center justify-content-end">
                         <div class="d-block d-sm-none">
-                            ☰
+                            <a href="#" id="mobile-menu-button">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </a>
                         </div>
-                        <nav class="d-none d-sm-block">
+                        <nav>
                             <ul class="list-inline d-block m-0">
                                 <li class="list-inline-item"><a href="#about" class="p-2">About</a></li>
                                 <li class="list-inline-item"><a href="#contact" class="p-2">Contact</a></li>
-                                <li class="list-inline-item"><a href="https://www.instagram.com/thecakelab.co/" class="p-2"><img src="/assets/images/instagram.svg"></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/thecakelab.co/" class="p-2"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
             </div>
         </header>
-        <section id="intro" class="parallax-bg d-flex align-items-center">
+        <section id="intro" class="parallax-bg">
             <div class="gradient"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col d-flex flex-column justify-content-center align-items-end text-right">
-                        <h1>The science of confectionary</h1>
-                        <p class="clipped">We are a specialist cakes and confectionaries company, with a focus on the science of premium raw ingredients.</p>
-                        <p>
-                            <!-- <strong>Innovative. Delicious.</strong> -->
-                            <a href="#contact"><strong>Get in touch</strong></a>
-                        </p>
+                    <div class="col-md col-12 d-flex flex-column justify-content-center align-items-center align-items-md-end mt-5 pt-3 mt-md-0 pt-md-0">
+                        <h1 class="text-center text-md-right">The science of confectionary</h1>
+                        <p class="clipped text-center text-md-right mb-3">We are a specialist cakes and confectionaries company, with a focus on the science of premium raw ingredients.</p>
+                        <p><a href="#contact"><strong>Get in touch</strong></a></p>
                     </div>
-                    <div class="col">
+                    <div class="col-md col-12">
                         <div id="cake-1" class="sprite" data-direction="down" data-speed="2" data-offsety="100"></div>
                     </div>
                 </div>
@@ -85,8 +85,11 @@
                 <div class="row">
                     <div class="col text-center p-5">
                         <h2>Say hello</h2>
-                        <p class="clipped">We specialise in making bespoke cakes based on your requirements. Please get in touch and we can start discussing your needs.<p>
-                        <p><a href="mailto:info@thecakelab.co" class="mr-3 ml-3">info@thecakelab.co</a> <a href="https://instagram.com/thecakelab" class="ml-3 mr-3">@thecakelab</a></p>
+                        <p class="clipped mb-3">We specialise in making bespoke cakes based on your requirements. Please get in touch and we can start discussing your needs.</p>
+                        <p>
+                            <a href="mailto:info@thecakelab.co" class="mr-3 ml-3 mb-3 mb-3 mt-3 mb-md-0 mt-md-0 d-inline-block"><i class="fa fa-envelope mr-1" aria-hidden="true"></i>info@thecakelab.co</a>
+                            <a href="https://instagram.com/thecakelab" class="ml-3 mr-3 d-inline-block"><i class="fa fa-instagram mr-1" aria-hidden="true"></i>thecakelab</a>
+                        </p>
                         <p><strong>Note:</strong> We are based in Marylebone and only deliver within the central London area.</p>
                     </div>
                 </div>
@@ -119,7 +122,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col small">
-                        &copy; The Cake Lab 2019    
+                        &copy; The Cake Lab 2019. All Rights Reserved.
                     </div>
                     <div class="col small text-right">
                         Website by <a href="https://twitter.com/rredfearn">Robbie Redfearn</a>
