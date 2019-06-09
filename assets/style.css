@@ -209,6 +209,9 @@ a:hover {
     margin-top: 72px;
   }
 
+  #gallery {
+    height: 650px;
+  }
   #gallery .g-column {
     flex: 100%;
   }
