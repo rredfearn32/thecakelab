@@ -6,11 +6,11 @@ sass.compiler = require('node-sass');
 gulp.task('sass', function () {
     return gulp.src('./assets/style.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('.assets'));
+        .pipe(gulp.dest('assets'));
 });
 
 gulp.task('sass:watch', function () {
-    gulp.watch('./assets/style.scss', ['sass']);
+    gulp.watch('./assets/style.scss', gulp.series('sass'));
 });
 
 gulp.task('webserver', function() {
