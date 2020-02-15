@@ -23,24 +23,8 @@ a {
 }
 
 #header {
-    transition: background-color 0.2s;
-
-    &.white-bg {
-        background-color: #fff;
-        border-bottom: 1px solid #ededed;
-    }
-
-    nav {
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-
-            li {
-                display: inline-block;
-            }
-        }
-    }
+    background-color: #fff;
+    border-bottom: 1px solid #ededed;
 
     .header-icon {
         background-image: url("./images/thecakelab500.png");
@@ -53,116 +37,17 @@ a {
 }
 
 #intro {
-    padding-top: 72px;
-    position: relative;
-    overflow: hidden;
-    background-image: url('./images/geometry2.png');
-
-    .gradient {
-        position: absolute;
-        height: 100%;
+    .slide {
         width: 100%;
-        background-image: linear-gradient(180deg, rgb(251, 239, 239) 10%, transparent 70%);
-        z-index: 0;
-        top: 0;
-    }
-
-    h1 {
-        max-width: 100%;
-    }
-
-    .clipped {
-        max-width: 360px;
-    }
-
-    #cake-cutout {
-        background-image: url('./images/cake_cutout.png');
-        height: 600px;
-        width: 100%;
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: left 100px;
-    }
-}
-
-#about {
-    #owner-picture {
+        height: calc(100vh - 71px);
         background-size: cover;
-        background-repeat: no-repeat;
         background-position: center;
-        background-image: url('./images/owner.jpg');
-        height: 500px;
-    }
-
-    #about-info {
-        color: #fff;
-        background-color: $red;
-        background-image: url("./images/az-subtle.png");
-
-        #mobile-owner {
-            margin: auto;
-            border: 5px solid #fff;
-            max-width: 400px;
-            width: 100%;
-        }
-    }
-
-    .clipped {
-        max-width: 500px;
-        margin: auto;
     }
 }
 
 #gallery {
-    height: 420px;
-    position: relative;
-    transition: height 0.2s;
-    overflow: hidden;
-
-    &.expanded {
-        height: 100%;
-    }
-
-    a {
-        position: absolute;
-        background: $red;
-        color: #ffffff;
-        bottom: 0;
-        width: 100%;
-        left: 0;
-
-        &:hover {
-            background-color: darken($red, 10%);
-        }
-    }
-    
-    .g-row {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 4px;
-        margin-bottom: 8px;
-    }
-    
-    /* Create four equal columns that sits next to each other */
-    .g-column {
-        flex: 25%;
-        padding: 0 4px;
-    }
-    
-    .g-column img {
-        margin-top: 8px;
-        vertical-align: middle;
-        width: 100%;
-    }
-}
-
-#contact {
-    background-image: linear-gradient(0deg, #dedede 0%, white 100%);
-
-    .clipped {
-        max-width: 450px;
-        margin: auto;
+    .card img {
+        max-width: 100%;
     }
 }
 
@@ -178,84 +63,12 @@ a {
 
 // When on tablets or larger mobile...
 @media (max-width: 767.98px) {
-    #intro {
-        #cake-cutout {
-            background-position: center 20px;
-        }
-
-        .clipped {
-            margin: auto;
-        }
-    }
-
-    #gallery {
-        .g-column {
-            flex: 50%;
-        }
-    }
+    
 }
 
 // When on mobile...
 @media (max-width: 575.98px) {
     #header {
-        nav {
-            display: none;
-            position: absolute;
-            top: 70px;
-            right: 10px;
-            text-align: right;
-
-            &::before {
-                content: "";
-                position: absolute;
-                width: 0;
-                height: 0;
-                border-left: 10px solid transparent;
-                border-right: 10px solid transparent;
-                border-bottom: 10px solid #fff;
-                top: -10px;
-                right: 5px;
-            }
-
-            ul {
-                border-radius: 3px;
-                overflow: hidden;
-                background: #fff;
-
-                li {
-                    display: block;
-                    border-bottom: 1px solid #f0f0f0;
-
-                    &:last-child {
-                        border-bottom: none;
-                    }
-
-                    a {
-                        display: block;
-
-                        &:hover {
-                            background-color: $red;
-                            color: #fff;
-                        }
-                    }
-                }
-            }
-
-            &.open {
-                display: block;
-            }
-        }
-    }
-
-    #intro {
-        height: 100vh;
-    }
-
-    #gallery {
-        height: 650px;
-
-        .g-column {
-            flex: 100%;
-        }
+        
     }
 }

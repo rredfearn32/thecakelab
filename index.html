@@ -7,123 +7,91 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="Title" content="The Cake Lab">
-        <meta name="Description" content="We are a specialist cakes and confectionery company, with a focus on the science of premium raw ingredients.">
+        <meta name="Description" content="We specialise in making bespoke wedding cakes based on your requirements. Please get in touch and we can start discussing your needs.">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700|Lato:400,700&display=swap" rel="stylesheet">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="./assets/font-awesome-4.7.0//css/font-awesome.min.css">
         <link rel="stylesheet" href="./assets/style.css">
         <link rel="icon" href="./assets/images/favicon.ico">
-        
         <!-- scripts -->
-        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-        <script src="./assets/polyfills/classlist.js"></script>
-        <script src="./assets/polyfills/foreach.js"></script>
-        <script src="./assets/polyfills/node_remove.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <script src="./assets/script.js"></script>
     </head>
     <body>
-        <header id="header" class="pt-3 pb-3 fixed-top">
+        <header id="header" class="pt-3 pb-3">
             <div class="container">
                 <div class="row">
-                    <div class="col">
-                        <div class="header-icon"></div>
-                    </div>
-                    <div class="col d-flex align-items-center justify-content-end">
-                        <div class="d-block d-sm-none">
-                            <a href="#" id="mobile-menu-button">
-                                <i class="fa fa-bars" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <nav>
-                            <ul class="d-block m-0">
-                                <li><a href="#about" class="p-3 p-md-2 snaplink">About</a></li>
-                                <li><a href="#contact" class="p-3 p-md-2 snaplink">Contact</a></li>
-                                <li><a href="https://www.instagram.com/thecakelab.co/" class="p-3 p-md-2"><i class="fa fa-instagram" aria-hidden="true"></i><span class="ml-2 d-inline-block d-sm-none">Instagram</span></a></li>
-                            </ul>
-                        </nav>
+                    <div class="col-12">
+                        <div class="header-icon">&nbsp;</div>
                     </div>
                 </div>
             </div>
         </header>
-        <section id="intro" class="parallax-bg">
-            <div class="gradient"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md col-12 d-flex flex-column justify-content-center align-items-center align-items-md-end mt-5 pt-3 mt-md-0 pt-md-0">
-                        <h1 class="text-center text-md-right">The science of confectionery</h1>
-                        <p class="clipped text-center text-md-right mb-3">We are a specialist cakes and confectionery company, with a focus on the science of premium raw ingredients.</p>
-                        <p><a href="#contact" class="btn btn-danger snaplink">Get in touch</a></p>
-                    </div><div class="col-md col-12">
-                        <div id="cake-cutout" class="sprite" data-direction="down" data-speed="4" data-offsety="100"></div>
-                    </div>
+        <section id="intro">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="d-block slide" style="background-image: url(./assets/images/cake_01.jpg)"></div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="d-block slide" style="background-image: url(./assets/images/cake_02.jpg)"></div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="d-block slide" style="background-image: url(./assets/images/cake_03.jpg)"></div>
+                  </div>
                 </div>
-            </div>
-        </section>
-        <section id="about" class="parallax-bg">
-            <div class="container-fluid">
-                <div class="row">
-                    <div id="owner-picture" class="col-12 col-md-6 d-none d-md-block">
-                        &nbsp;
-                    </div>
-                    <div id="about-info" class="col-12 col-md-6 d-block d-md-flex flex-column justify-content-center">
-                        <div class="p-md-5 pt-5 pb-4 text-center text-md-left">
-                            <div class="clipped mb-4">
-                                <h2>What we do</h2>
-                                <p>We specialise in bespoke cakes and confectionery for celebrations and weddings.</p>
-                            </div>
-                            <div class="clipped">
-                                <h2>How we do it</h2>
-                                <p>Science is core to our philosophy, as all our products are created by scientists who are passionate about good food. Through mixing art and science, we are able to produce beautiful, delicious cakes and confectionery.</p>
-                            </div>
-                        </div>
-                        <img src="./assets/images/owner.jpg" id='mobile-owner' class="d-block d-md-none mb-5">
-                    </div>
-                </div>
-            </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
         </section>
         <section id="contact">
             <div class="container">
                 <div class="row">
                     <div class="col text-center p-5">
-                        <h2>Say hello</h2>
-                        <p class="clipped mb-3">We specialise in making bespoke cakes based on your requirements. Please get in touch and we can start discussing your needs.</p>
+                        <h2>The Cake Lab</h2>
+                        <p class="mb-3">We specialise in making bespoke wedding cakes based on your requirements.</p>
+                        <p class="mb-3">Please get in touch and we can start discussing your needs.</p>
                         <p>
                             <address>
                                 <a href="mailto:info@thecakelab.co" class="mr-3 ml-3 mb-3 mb-3 mt-3 mb-md-0 mt-md-0 d-inline-block"><i class="fa fa-envelope mr-1" aria-hidden="true"></i>info@thecakelab.co</a>
                                 <a href="https://instagram.com/thecakelab.co" class="ml-3 mr-3 d-inline-block"><i class="fa fa-instagram mr-1" aria-hidden="true"></i>thecakelab</a>
                             </address>
                         </p>
-                        <p><strong>Note:</strong> We are based in Marylebone and only deliver within the central London area.</p>
                     </div>
                 </div>
             </div>
         </section>
         <section id="gallery">
-            <div class="g-row">
-                <div class="g-column">
-                    <img src="./assets/images/cake_01.jpg">
-                    <img src="./assets/images/cake_02.jpg">
-                    <img src="./assets/images/cake_03.jpg">
-                    <img src="./assets/images/cake_04.jpg">
-                </div>
-                <div class="g-column">
-                    <img src="./assets/images/cake_05.jpg">
-                    <img src="./assets/images/cake_06.jpg">
-                    <img src="./assets/images/cake_07.jpg">
-                    <img src="./assets/images/cake_08.jpg">
-                </div>
-                <div class="g-column">
-                    <img src="./assets/images/cake_09.jpg">
-                    <img src="./assets/images/cake_10.jpg">
-                    <img src="./assets/images/cake_11.jpg">
-                    <img src="./assets/images/cake_12.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-columns">
+                            <div class="card"><img src="./assets/images/cake_04.jpg" alt="Another cake" /></div>
+                            <div class="card"><img src="./assets/images/cake_04.jpg" alt="Another cake" /></div>
+                            <div class="card"><img src="./assets/images/cake_04.jpg" alt="Another cake" /></div>
+                            <div class="card"><img src="./assets/images/cake_04.jpg" alt="Another cake" /></div>
+                            <div class="card"><img src="./assets/images/cake_04.jpg" alt="Another cake" /></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <a href="#" id="gallery-expander" class="text-center p-3">View more</a>
         </section>
         <footer id="footer" class="p-3">
             <div class="container">
@@ -138,9 +106,6 @@
             </div>
         </footer>
         <script>
-            (function(){
-                app.go();
-            })();
         </script>
     </body>
 </html>
