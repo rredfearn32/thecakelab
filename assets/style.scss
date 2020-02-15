@@ -37,6 +37,10 @@ a {
 }
 
 #intro {
+    video {
+        max-width: 100%;
+    }
+
     .slide {
         width: 100%;
         height: calc(100vh - 71px);

@@ -25,6 +25,9 @@ a {
     height: 40px;
     width: 185px; }
 
+#intro video {
+  max-width: 100%; }
+
 #intro .slide {
   width: 100%;
   height: calc(100vh - 71px);
