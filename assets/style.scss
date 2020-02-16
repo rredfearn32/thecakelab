@@ -56,10 +56,40 @@ a {
     }
 }
 
-#gallery {
-    .card img {
-        max-width: 100%;
+#weddings, #celebrations {
+    .content {
+        position: relative;
+        background-size: cover;
+        background-position: 300px;
+        background-repeat: no-repeat;
+        padding: 30px 0 30px;
+
+        h2, p {
+            position: relative;
+            z-index: 1;
+        }
     }
+
+    .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, rgba(255,255,255,1) 80%, rgba(255,255,255,0.3) 100%);
+    }
+}
+
+#weddings .content {
+    background-image:url('/assets/images/White_wedding_cake_with_leaves_and_flowers.jpg');
+}
+
+#celebrations .content {
+    background-image:url('/assets/images/Eighteenth_birthday_cake_with_strawberries_and_flowers.jpg');
+}
+
+.card-columns .card img {
+    max-width: 100%;
 }
 
 #footer {
