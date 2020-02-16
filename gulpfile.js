@@ -1,11 +1,13 @@
-var gulp = require('gulp');
-var webserver = require('gulp-webserver');
-var sass = require('gulp-sass');
+let gulp = require('gulp');
+let webserver = require('gulp-webserver');
+let sass = require('gulp-sass');
+let cleanCSS = require('gulp-clean-css');
 sass.compiler = require('node-sass');
 
 gulp.task('sass', function () {
     return gulp.src('./assets/style.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('assets'));
 });
 

@@ -21,6 +21,7 @@
   "homepage": "https://github.com/rredfearn32/thecakelab#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
     "gulp-sass": "^4.0.2",
     "gulp-webserver": "^0.9.1",
     "node-sass": "^4.13.1"
