@@ -42,6 +42,7 @@ a {
 
     nav {
         z-index: 1;
+
         ul {
             list-style: none;
             margin: 0;
@@ -49,6 +50,10 @@ a {
 
             li {
                 display: inline-block;
+
+                .current {
+                    border-bottom: 1px solid;
+                }
             }
         }
     }
@@ -130,6 +135,11 @@ a {
                     a {
                         display: block;
                         color: $red;
+
+                        &.current {
+                            border-bottom: none;
+                            font-weight: bold;
+                        }
                     }
                 }
             }
