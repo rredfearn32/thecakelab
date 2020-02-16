@@ -27,7 +27,7 @@ const app = {
         
         for(let i = 0; i < app.parallaxSections.length; i++) {
             let ps = app.parallaxSections[i];
-            ps.style.backgroundPositionY = -(ps.getBoundingClientRect().top / 2) + 'px';
+            ps.style.backgroundPositionY = -(ps.getBoundingClientRect().top / 3) + 'px';
         }
     },
     

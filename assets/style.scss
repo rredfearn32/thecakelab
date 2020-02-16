@@ -64,6 +64,7 @@ a {
     .product {
         background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
 
         .inner {
             background-color: rgba(255,255,255,0.9);
@@ -75,6 +76,7 @@ a {
     }
 
     #products-celebrations {
+        background-size: 150%;
         background-image: url('/assets/images/Cake_decorated_with_cherries_strawberries_redcurrants_raspberries_blackberries_mint_blueberries_icing.jpg');
     }
 }
