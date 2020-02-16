@@ -1,6 +1,9 @@
 const app = {
+    parallaxSections: null,
+
     go: function() {
-        this.startEventListeners();
+        app.positionParallaxSections();
+        app.startEventListeners();
     },
 
     startEventListeners: function() {
@@ -11,6 +14,21 @@ const app = {
         
             document.addEventListener('click', app.handleBodyClickToCloseMenu);
         });
+
+        document.addEventListener('scroll', function(ev) {
+           app.positionParallaxSections(); 
+        });
+    },
+
+    positionParallaxSections: function() {
+        if(!app.parallaxSections) {
+            app.parallaxSections = document.querySelectorAll('.parallax');
+        }
+        
+        for(let i = 0; i < app.parallaxSections.length; i++) {
+            let ps = app.parallaxSections[i];
+            ps.style.backgroundPositionY = -(ps.getBoundingClientRect().top / 2) + 'px';
+        }
     },
     
     handleBodyClickToCloseMenu: function() {

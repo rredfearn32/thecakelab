@@ -60,9 +60,22 @@ a {
     }
 }
 
-#branches {
-    img {
-        width: 250px;
+#products {
+    .product {
+        background-size: cover;
+        background-position: center;
+
+        .inner {
+            background-color: rgba(255,255,255,0.9);
+        }
+    }
+
+    #products-wedding {
+        background-image: url('/assets/images/White_wedding_cake_with_leaves_and_flowers.jpg');
+    }
+
+    #products-celebrations {
+        background-image: url('/assets/images/Cake_decorated_with_cherries_strawberries_redcurrants_raspberries_blackberries_mint_blueberries_icing.jpg');
     }
 }
 
