@@ -31,15 +31,6 @@ img {
     max-width: 100%;
 }
 
-.scroller {
-    overflow-x: auto;
-    
-    img {
-        margin: 0 5px;
-        height: 50vh;
-    }
-}
-
 #header {
     background-color: #fff;
     border-bottom: 1px solid #ededed;
@@ -99,6 +90,11 @@ img {
     }
 }
 
+#weddings-one {
+    background-position: center left;
+    background-image: url('./images/Wedding_cake_with_flowers.jpg');
+}
+
 #footer {
     background-color: #333;
     color: #fefefe;
@@ -112,6 +108,13 @@ img {
 #faqs {
     ul li {
         margin-bottom: 2.5em;
+    }
+}
+
+// When on smaller desktop or laptop...
+@media (max-width: 991px) {
+    #weddings-one {
+        background-position: center right;
     }
 }
 
@@ -167,6 +170,11 @@ img {
                 display: block;
             }
         }
+    }
+
+    #weddings-one {
+        background-position: -680px -340px;
+        padding-bottom: 200px;
     }
 }
 
