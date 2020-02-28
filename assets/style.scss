@@ -27,8 +27,17 @@ a {
     }
 }
 
-.card-columns .card img {
+img {
     max-width: 100%;
+}
+
+.scroller {
+    overflow-x: auto;
+    
+    img {
+        margin: 0 5px;
+        height: 50vh;
+    }
 }
 
 #header {
@@ -97,6 +106,12 @@ a {
     a {
         color: #fefefe;
         font-weight: bold;
+    }
+}
+
+#faqs {
+    ul li {
+        margin-bottom: 2.5em;
     }
 }
 
