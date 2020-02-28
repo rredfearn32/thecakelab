@@ -90,10 +90,25 @@ img {
     }
 }
 
-#weddings-one {
-    background-position: center left;
-    background-image: url('./images/Wedding_cake_with_flowers.jpg');
+
+#weddings {
+    #weddings-one {
+        background-position: center left;
+        background-image: url('./images/Wedding_cake_with_flowers.jpg');
+    }
+    .slider-images {
+        height: 300px;
+    }
 }
+
+#celebrations {
+    #celebrations-one {
+        background-position: 0px -1000px;
+        background-image: url('./images/White_icing_cake_with_crystalized_blood_orange_and_pomegranate.jpg');
+        background-size: 220%;
+    }
+}
+
 
 #footer {
     background-color: #333;
@@ -113,8 +128,16 @@ img {
 
 // When on smaller desktop or laptop...
 @media (max-width: 991px) {
-    #weddings-one {
-        background-position: center right;
+    #weddings {
+        #weddings-one {
+            background-position: center right;
+        }
+    }
+
+    #celebrations {
+        #celebrations-one {
+            background-position: 0 -790px;
+        }
     }
 }
 
@@ -172,9 +195,19 @@ img {
         }
     }
 
-    #weddings-one {
-        background-position: -680px -340px;
-        padding-bottom: 200px;
+    #weddings {
+        #weddings-one {
+            background-position: -680px -340px;
+            padding-bottom: 200px;
+        }
+    }
+
+    #celebrations {
+        #celebrations-one {
+            background-position: -960px 0;
+            background-size: auto;
+            padding-bottom: 200px;
+        }
     }
 }
 
