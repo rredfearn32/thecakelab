@@ -8,6 +8,7 @@ $light-grey: darken(white, 10%);
 body {
     font-family: 'Lato', sans-serif;
     color: #333;
+    min-height: calc(100vh - 71px);
 }
 
 h1, h2, h3 {
@@ -93,8 +94,8 @@ img {
 
 #weddings {
     #weddings-hero {
-        background-position: center left;
         background-image: url('./images/Wedding_cake_with_flowers.jpg');
+        background-position: center left;
     }
     .slider-images {
         height: 300px;
@@ -103,9 +104,18 @@ img {
 
 #celebrations {
     #celebrations-hero {
-        background-position: 0px -1000px;
         background-image: url('./images/White_icing_cake_with_crystalized_blood_orange_and_pomegranate.jpg');
+        background-position: 0px -1000px;
         background-size: 220%;
+    }
+}
+
+#contact {
+    #contact-hero {
+        background-image: url('./images/Cake_lab_owner_and_creator.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 500px;
     }
 }
 
