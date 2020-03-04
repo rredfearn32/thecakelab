@@ -2,13 +2,12 @@ $red: #cf4747;
 $light-grey: darken(white, 10%);
 
 :root {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 body {
     font-family: 'Lato', sans-serif;
     color: #333;
-    min-height: calc(100vh - 71px);
 }
 
 h1, h2, h3 {
@@ -114,7 +113,8 @@ img {
     background-color: #333;
 
     section {
-        background-color: #fff;;
+        background-color: #fff;
+        min-height: calc(100vh - 119px);
     }
 
     #contact-hero {
