@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest"
   },
   "engines": {
     "node": ">=16.0.0",
@@ -17,21 +18,25 @@
     "npm": "please-use-yarn"
   },
   "dependencies": {
-    "next": "12.0.7",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.1",
     "@commitlint/config-conventional": "^17.0.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
     "@types/node": "16.11.12",
-    "@types/react": "17.0.37",
+    "@types/react": "^18.0.9",
     "autoprefixer": "^10.4.0",
     "cross-env": "^7.0.3",
     "eslint": "8.4.1",
     "eslint-config-next": "12.0.7",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
     "postcss": "^8.4.4",
     "prettier": "^2.6.2",
     "stylelint": "^14.8.5",
